@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block main %}
+<section class="content-section container">
+    {% if welcome is not none %}
+    <p style="font-size:2em; color:green; text-align:center;background-color:#ddd;">{{welcome}}</p>
+    <p>Redirecting in 5s..</p>
+    {% endif %}
+    <h2 class="content-header">Today's Top Products</h2>
+    <div class="top-product-row">
+        <span class="products product-serial">Serial</span>
+        <span class="products product-name" style="font-weight: bold;">Name</span>
+        <span class="products product-price" style="font-weight: bold;">Price</span>
+        <span class="products product-serial" style="font-weight: bold;">Link</span>
+    </div>
+    <div class="top-product-row">
+        <span class="products product-serial">1</span>
+        <span class="products product-name">Soya</span>
+        <span class="products product-price">Tk 100</span>
+        <button class="products btn link-button btn-primary" type="button">Buy Now</button>
+    </div>
+    <div class="top-product-row">
+        <span class="products product-serial">2</span>
+        <span class="products product-name">Lentis</span>
+        <span class="products product-price">Tk 150</span>
+        <button class="products btn link-button btn-primary" type="button">Buy Now</button>
+    </div>
+    <div class="top-product-row">
+        <span class="products product-serial">3</span>
+        <span class="products product-name">Sanitizer</span>
+        <span class="products product-price">Tk 200</span>
+        <button class="products btn link-button btn-primary" type="button">Buy Now</button>
+    </div>
+    <div class="top-product-row">
+        <span class="products product-serial">4</span>
+        <span class="products product-name">Bathroom Cleaner</span>
+        <span class="products product-price">Tk 250</span>
+        <button class="products btn link-button btn-primary" type="button">Buy Now</button>
+    </div>
+    <div class="top-product-row">
+        <span class="products product-serial">5</span>
+        <span class="products product-name" ">Head Phone</span>
+            <span class=" products product-price ">Tk 500</span>
+        <button class="products btn link-button btn-primary " type="button ">Buy Now</button>
+    </div>
+
+</section>
+{% endblock %}

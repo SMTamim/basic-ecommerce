@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block main %}
+<section class="content-section container">
+    <h2 class="content-header"> Login </h2>
+    {% if welcome is not none %}
+    <p style="font-size:2em; color:red; text-align:center;">{{welcome}}</p>
+    {% endif %}
+    <form action="/login" method="post" id="loginForm">
+        <div class="single-field">
+            <label for="userName">Username:</label>
+            <br>
+            <input type="text" name="username" id="userName" placeholder="jhon">
+        </div>
+        <div class="single-field">
+            <label for="passWord">Password:</label>
+            <br>
+            <input type="password" name="password" id="passWord">
+        </div>
+
+        <input type="submit" value="Login" class="btn btn-primary link-button">
+    </form>
+</section>
+{% endblock %}

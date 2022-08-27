@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Commerce Shop | {{title}}</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav main-nav">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/store">STORE</a></li>
+                <li><a href="/about">ABOUT</a></li>
+            </ul>
+        </nav>
+        <h1 class="store-name store-name-large">Basic E-Commerce Shop</h1>
+    </header>
+    {% block main %} {% endblock %}
+    <footer class="main-footer ">
+        <div class="container main-footer-container">
+            <h2 class="store-name na">Basic E-Commerce Shop</h2>
+            <ul class="nav footer-nav">
+                <li>
+                    <a href="https://fb.com" target="_blank"><img src="static/img/fb.png" alt="Facebook Link"></a>
+                </li>
+                <li>
+                    <a href="https://twiter.com" target="_blank"><img src="static/img/twt.png" alt="Twiter Link"></a>
+                </li>
+                <li>
+                    <a href="https://youtube.com" target="_blank"><img src="static/img/yt.png" alt="YouTube Link"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="static/js/admin.js"></script>
+    <script src="static/js/store.js"></script>
+</body>
+
+</html>
