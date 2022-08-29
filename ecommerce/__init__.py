@@ -1,9 +1,12 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from ecommerce import db_info
 import os
-from flask_bcrypt import Bcrypt
 from datetime import timedelta
+
+from flask import Flask
+from flask_bcrypt import Bcrypt
+from flask_sqlalchemy import SQLAlchemy
+
+from ecommerce import db_info
+
 # from flask_mysqldb import MySQL
 
 UPLOAD_FOLDER = os.path.join(os.path.abspath(os.getcwd()), 'ecommerce', 'static', 'uploads')

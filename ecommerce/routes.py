@@ -1,15 +1,12 @@
-import os
-import time
-from flask import render_template, request, redirect, session, flash
-from ecommerce import app, db
 import datetime
 import json
-from ecommerce.models import Product, Category, User
-from ecommerce import bcrypt
+import os
+import time
 
-# BdApps Config
-APP_ID = 'APP_061652'
-PASSWORD = "bf15849c24ff29c8b2f7ea13f609fb95"
+from flask import flash, redirect, render_template, request, session
+
+from ecommerce import app, bcrypt, db
+from ecommerce.models import Category, Product, User
 
 
 @app.route('/')

@@ -38,6 +38,7 @@ class Category(db.Model):
     def __repr__(self):
         return f'Category(id:{self.id} Name:{self.name} Tags:{self.tags})'
 
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(200), nullable=False)

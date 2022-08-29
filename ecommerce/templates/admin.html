@@ -1,68 +1,85 @@
 {% extends 'base.html' %} {% block main %}
 <section class="content-section container">
-    <h2 class="content-header">Welcome to Admin Panel {% if welcome is not none %}<span style="color:green;">{{welcome}}</span> {% endif %}</h2>
+    <h2 class="content-header">
+        Welcome to Admin Panel {% if welcome is not none %}<span style="color: green"
+            >{{welcome}}</span
+        >
+        {% endif %}
+    </h2>
 
     <div id="admin-nav">
         <button id="addAProduct" class="btn btn-primary link-button">Add Product</button>
     </div>
 
-    <form action="/product" method="post" id="product-input-form" class="hideForm" enctype="multipart/form-data">
+    <form
+        action="/product"
+        method="post"
+        id="product-input-form"
+        class="hideForm"
+        enctype="multipart/form-data"
+    >
         <div class="product-input-info">
             <div class="single-input">
-                <label for="prod_name">
-                    Name:
-                </label>
-                <input type="text" name="prod_name" id="prod_name" placeholder="Maggie Nodules" required>
+                <label for="prod_name"> Name: </label>
+                <input
+                    type="text"
+                    name="prod_name"
+                    id="prod_name"
+                    placeholder="Maggie Nodules"
+                    required
+                />
             </div>
             <div class="single-input">
-                <label for="prod_img">
-                    Image:
-                </label>
-                <input type="file" name="prod_img" id="prod_img" required>
+                <label for="prod_img"> Image: </label>
+                <input type="file" name="prod_img" id="prod_img" required />
             </div>
             <div class="single-input">
-                <label for="prod_color">
-                    Product color:
-                </label>
-                <input type="text" name="prod_color" id="prod_color" placeholder="green" required>
+                <label for="prod_color"> Product color: </label>
+                <input type="text" name="prod_color" id="prod_color" placeholder="green" required />
             </div>
             <div class="single-input">
-                <label for="prod_price">
-                    Price:
-                </label>
-                <input type="number" name="prod_price" id="prod_price" placeholder="15" required>
+                <label for="prod_price"> Price: </label>
+                <input type="number" name="prod_price" id="prod_price" placeholder="15" required />
             </div>
             <div class="single-input">
-                <label for="prod_stock">
-                    In Stock:
-                </label>
-                <input type="number" name="prod_stock" id="prod_stock" placeholder="1000" required>
+                <label for="prod_stock"> In Stock: </label>
+                <input
+                    type="number"
+                    name="prod_stock"
+                    id="prod_stock"
+                    placeholder="1000"
+                    required
+                />
             </div>
             <div class="single-input">
-                <label for="prod_manufacturer">
-                    Manufacturer:
-                </label>
-                <input type="text" name="prod_manufacturer" id="prod_manufacturer" placeholder="Nestle" required>
-            </div>
-
-            <div class="single-input">
-                <label for="prod_size">
-                    Product Size/Contents:
-                </label>
-                <input type="text" name="prod_size" id="prod_size" placeholder="100gm" required>
-            </div>
-
-            <div class="single-input">
-                <label for="prod_description">
-                    Description:
-                </label>
-                <textarea name="prod_description" id="prod_description" placeholder="It is a good Nodules." cols="100" rows="10"></textarea>
+                <label for="prod_manufacturer"> Manufacturer: </label>
+                <input
+                    type="text"
+                    name="prod_manufacturer"
+                    id="prod_manufacturer"
+                    placeholder="Nestle"
+                    required
+                />
             </div>
 
             <div class="single-input">
-                <label for="prod_category">
-                    Select Product Category:
-                </label>
+                <label for="prod_size"> Product Size/Contents: </label>
+                <input type="text" name="prod_size" id="prod_size" placeholder="100gm" required />
+            </div>
+
+            <div class="single-input">
+                <label for="prod_description"> Description: </label>
+                <textarea
+                    name="prod_description"
+                    id="prod_description"
+                    placeholder="It is a good Nodules."
+                    cols="100"
+                    rows="10"
+                ></textarea>
+            </div>
+
+            <div class="single-input">
+                <label for="prod_category"> Select Product Category: </label>
                 <select name="prod_category" id="prod_category">
                     <option value="1">Food</option>
                     <option value="2">Grocery</option>
@@ -73,10 +90,9 @@
                     <option value="7">Ebook</option>
                 </select>
             </div>
-            <input type="hidden" name="type" value="1">
-            <input class="btn btn btn-primary link-button" type="submit" value="Save Product">
+            <input type="hidden" name="type" value="1" />
+            <input class="btn btn btn-primary link-button" type="submit" value="Save Product" />
         </div>
     </form>
-
 </section>
 {% endblock %}
